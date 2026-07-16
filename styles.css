@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html {
+    background: linear-gradient(#16100F, #3B2421);
+}
+
 body {
     background: linear-gradient(#16100F, #3B2421);
     padding: 70px 20px 30px;
