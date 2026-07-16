@@ -1,0 +1,7 @@
+{
+  "name": "Pachara Buatim",
+  "short_name": "Pachara",
+  "theme_color": "#16100F",
+  "background": "linear-gradient(#16100F, #3B2421)",
+  "display": "standalone"
+}
