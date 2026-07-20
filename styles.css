@@ -15,13 +15,19 @@
     box-sizing: border-box;
 }
 
-body, html {
+html, body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
     background: linear-gradient(#16100F, #3B2421);
     background-color: #16100F;
 }
 
-body {
+main {
     padding: 70px 20px 30px;
+    min-height: 100vh;
 }
 
 #hero-section {
@@ -67,23 +73,6 @@ h1 {
     margin-bottom: 100px;
 }
 
-.about {
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.role, .about {
-    color: var(--second-color);
-}
-
-.about ~ p {
-    color: var(--third-color);
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
-
 #social-media-links a {
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
@@ -97,25 +86,67 @@ h1 {
   opacity: 0.7;
 }
 
+.section-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    text-decoration: none;
+}
+
+.project-name {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.role, 
+.section-title, 
+.project-name {
+    color: var(--second-color);
+}
+
+.section-title ~ p {
+    color: var(--third-color);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+
+#about-section {
+    margin-bottom: 100px;
+}
+
+
+/* min-width 768px */
+
+@media (min-width: 768px) {
+    #content-section {
+        padding: 0 30px;
+    }
+}
 
 
 
-
-/* desktop */
+/* min-width 1024px */
 
 @media (min-width: 1024px) {
     main {
         display: flex;
     }
 
-    #hero-section {
-        width: 50%;
+   #hero-section {
+        position: fixed;
+        top: 70px;
+        left: 20px;
+        width: calc(50% - 20px);
+        height: calc(100vh - 100px);
+        padding: 30px 0 0 30px;
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
-        padding-top: 30px;
-        padding-left: 100px;
-        position: sticky;
-        top: 0;
-
     }
 
     .profile-layout {
@@ -132,7 +163,7 @@ h1 {
     }
 
     .role {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .desktop-nav {
@@ -144,7 +175,7 @@ h1 {
 
     .desktop-nav a {
         text-decoration: none;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: bold;
         color: #B3B3B390;
         display: flex;
@@ -174,7 +205,7 @@ h1 {
 
     #social-media-links {
         margin-top: auto;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
 
     .profile-picture-desktop {
@@ -184,33 +215,42 @@ h1 {
     }
 
     #about-section {
+        margin-bottom: 200px;
+    }
+
+    #content-section {
+        margin-left: 50%;
         width: 50%;
-        padding-right: 100px;
-        padding-top: 30px;
+        padding: 30px 30px 0 0;
     }
 
     #about-section h2 {
         display: none;
     }
 
-    body {
-        height: 100vh;
-    }
-
     .cursor-light {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(
         1200px circle at var(--x) var(--y),
         rgba(230, 107, 107, 0.08),
-        transparent 40%
-    );
-    z-index: 0;
+        transparent 40%);
+        z-index: 0;
+    }
+}
+
+
+
+/* min-width 1280px */
+
+@media (min-width: 1280px) {
+
+    #hero-section {
+        padding: 60px 0 0 60px;
     }
 
-    main {
-    position: relative;
-    z-index: 1;
+    #content-section {
+        padding: 60px 60px 0 0;
     }
 }
