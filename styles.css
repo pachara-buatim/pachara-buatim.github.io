@@ -107,6 +107,7 @@ header {
     width: 20px;
 }
 
+#vinyl-image,
 #vinyl-video {
     width: 100vw;
     height: 100vh;
@@ -114,6 +115,10 @@ header {
     position: absolute;
     top: 0;
     z-index: -1;
+}
+
+#vinyl-image {
+    z-index: -2;
 }
 
 h1 {
