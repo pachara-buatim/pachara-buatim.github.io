@@ -27,9 +27,15 @@ window.addEventListener("scroll", () => {
    }
 });
 
-window.addEventListener("load", () => {
+
+function playIntroAnimation() {
    const bg = document.getElementById("animate-background");
    const outline = document.querySelector(".animate-title");
+
+   bg.classList.remove("animate");
+   outline.classList.remove("show-outline");
+
+   void bg.offsetWidth;
 
    setTimeout(() => {
       bg.classList.add("animate");
@@ -38,5 +44,9 @@ window.addEventListener("load", () => {
    setTimeout(() => {
       outline.classList.add("show-outline");
    }, 50);
+}
 
+window.addEventListener("load", () => {
+   playIntroAnimation();
 });
+
