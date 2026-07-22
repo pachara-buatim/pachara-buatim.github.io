@@ -75,6 +75,18 @@ header {
     justify-content: flex-end;
 }
 
+.menu-button {
+    width: 32px;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+.logos {
+    width: 20px;
+}
+
 .contact-btn {
     color: #fff;
     font-weight: 700;
@@ -100,18 +112,31 @@ header {
     background-color: #000;
 }
 
-.menu-button {
-    width: 32px;
+#vinyl-video {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
-.menu-button:hover {
-    cursor: pointer;
+h1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 64px;
+    position: absolute;
+    top: 0;
+    z-index: 4;
 }
 
-.logos {
-    width: 20px;
-}
 
+/* Hero Animation */
 #animate-background {
     display: flex;
     position: absolute;
@@ -173,29 +198,8 @@ header {
     opacity: 1;
 }
 
-#vinyl-video {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-}
 
-h1 {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    font-size: 64px;
-    position: absolute;
-    top: 0;
-    z-index: 4;
-}
-
+/* About Section */
 #about-section {
     min-height: 100vh;
     padding: 60px 20px;
@@ -216,7 +220,7 @@ h1 {
 }
 
 
-/* small phone */
+/* Small Phone */
 @media (max-width: 390px) {
     #about-title {
         font-size: 32px;
@@ -228,7 +232,7 @@ h1 {
 }
 
 
-/* medium screen */
+/* Medium Screen */
 @media (min-width: 640px) {
     h1, .animate-title {
         font-size: 150px;
@@ -244,8 +248,7 @@ h1 {
 }
 
 
-/* big screen */
-
+/* Big Screen */
 @media (min-width: 1024px) {
     
     h1, .animate-title {
