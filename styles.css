@@ -24,7 +24,7 @@ header {
     align-items: center;
     padding: 10px 20px;
     width: 100vw;
-    padding: 30px 50px;
+    padding: 20px;
     position: fixed;
     top: 0;
     z-index: 2;
@@ -39,6 +39,7 @@ header {
     font-weight: 700;
     text-decoration: none;
     z-index: 2;
+    display: none;
 }
 
 .nav-link:not(.name-link):hover {
@@ -74,6 +75,7 @@ header {
     font-weight: 700;
     border: 1.5px solid #fff;
     padding: 7px 15px;
+    display: none;
 }
 
 .contact-btn:hover {
@@ -120,16 +122,17 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: #fff;
-    font-size: 178px;
+    font-size: 64px;
     position: absolute;
     top: 0;
     z-index: 1;
 }
 
 #about-section {
-    height: 100vh;
-    padding: 0 100px;
+    min-height: 100vh;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,14 +141,78 @@ h1 {
 }
 
 #about-title {
-    font-size: 80px;
+    font-size: 40px;
 }
 
 .introduction, .poetry {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 200;
 }
 
-.poetry {
-    margin-left: 30px;
+
+/* small phone */
+@media (max-width: 390px) {
+    #about-title {
+        font-size: 32px;
+    }
+
+    .introduction, .poetry {
+        font-size: 24px;
+    }
 }
+
+
+/* medium screen */
+@media (min-width: 640px) {
+    h1 {
+        font-size: 150px;
+    }
+
+    #about-title {
+        font-size: 100px;
+    }
+
+    .introduction, .poetry {
+        font-size: 52px;
+    }
+}
+
+
+/* big screen */
+
+@media (min-width: 1024px) {
+    
+    h1 {
+        font-size: 178px;
+    }
+
+    .nav-link, .name-link {
+        display: inline-block;
+    }
+
+    .contact-btn {
+        display: inline-block;
+    }
+
+    #nav-bar {
+        padding: 30px 50px;
+    }
+
+    #about-section {
+        padding: 0 100px;
+    }
+
+    #about-title {
+        font-size: 80px;
+    }
+
+    .introduction, .poetry {
+        font-size: 40px;
+    }
+
+    .poetry {
+        margin-left: 30px;
+    }
+}
+
+
