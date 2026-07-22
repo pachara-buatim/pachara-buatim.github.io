@@ -1,33 +1,28 @@
-const light = document.querySelector(".cursor-light");
+const navBar = document.getElementById("nav-bar");
+const menuButton = document.querySelector(".menu-button");
+const spotifyLogo = document.querySelector(".spotify");
+const appleLogo = document.querySelector(".apple");
+const amazonLogo = document.querySelector(".amazon");
+const youtubeLogo = document.querySelector(".youtube");
+const contactBtn = document.querySelector(".contact-btn");
 
-window.addEventListener("mousemove", (e) => {
-    light.style.setProperty("--x", `${e.clientX}px`);
-    light.style.setProperty("--y", `${e.clientY}px`);
-});
 
-const sections = document.querySelectorAll("#about-section");
-const navLinks = document.querySelectorAll(".nav-link");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-            });
-
-            const activeLink = document.querySelector(
-                `.nav-link[href="#${entry.target.id}"]`
-            );
-
-            if (activeLink) {
-                activeLink.classList.add("active");
-            }
-        }
-    });
-}, {
-    threshold: 0.5
-});
-
-sections.forEach(section => {
-    observer.observe(section);
+window.addEventListener("scroll", () => {
+   if (window.scrollY > window.innerHeight - 50) {
+    navBar.classList.add("dark");
+    menuButton.src = "assets/svg-dark/menu-dark.svg";
+    spotifyLogo.src = "assets/svg-dark/spotify-logo-dark.svg";
+    appleLogo.src = "assets/svg-dark/apple-logo-dark.svg";
+    amazonLogo.src = "assets/svg-dark/amazon-logo-dark.svg";
+    youtubeLogo.src = "assets/svg-dark/youtube-logo-dark.svg";
+    contactBtn.classList.add("contact-btn-dark");
+   } else {
+    navBar.classList.remove("dark");
+    menuButton.src = "assets/svgs/menu.svg";
+    spotifyLogo.src = "assets/svgs/spotify-logo.svg";
+    appleLogo.src = "assets/svgs/apple-logo.svg";
+    amazonLogo.src = "assets/svgs/amazon-logo.svg";
+    youtubeLogo.src = "assets/svgs/youtube-logo.svg";
+    contactBtn.classList.remove("contact-btn-dark");
+   }
 });

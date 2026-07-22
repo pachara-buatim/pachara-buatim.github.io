@@ -3,71 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Pachara Buatim</title>
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="cursor-light"></div>
+    <nav id="nav-bar">
+            <div class="nav-left">
+                <img class="menu-button" src="assets/svgs/menu.svg">
+                <a href="#about-section" class="nav-link">ABOUT</a>
+                <a class="nav-link">PROJECTS</a>
+                <a class="nav-link">MUSIC</a>
+            </div>
+            <a href="#hero-section" class="nav-link name-link">PACHARA BUATIM</a>
+            <div class="nav-right">
+                <a class="nav-link"><img class="spotify logos" src="assets/svgs/spotify-logo.svg"></a>
+                <a class="nav-link"><img class="apple logos" src="assets/svgs/apple-logo.svg"></a>
+                <a class="nav-link"><img class="amazon logos" src="assets/svgs/amazon-logo.svg"></a>
+                <a class="nav-link"><img class="youtube logos" src="assets/svgs/youtube-logo.svg"></a>
+                <a class="contact-btn">CONTACT</a>
+            </div>
+        </nav>
+    <header id="hero-section">
+        <video id="vinyl-video" src="assets/vinyl.mp4" autoplay muted loop></video>
+        <h1>PACHARA BUATIM</h1>
+    </header>
     <main>
-        <section id="hero-section">
-            <div class="profile-layout">
-                <img class="profile-picture" src="assets/profile-picture.jpg" alt="Profile picture" width="204">
-                <h1>Pachara Buatim</h1>
-            </div>
-            <p class="role bold">Web Developer & Artist</p>
-            <p class="introduction">Code, music and curiosity.</p>
-            <nav class="desktop-nav">
-                <a href="#about-section" class="nav-link active">ABOUT</a>
-                <a href="#project-section" class="nav-link">PROJECT</a>
-            </nav>
-            <div id="social-media-links">
-                <a href="https://github.com/pachara-buatim"><img src="assets/svg logos/github-logo.svg" alt="Github logo"></a>
-                <a href="https://www.instagram.com/korviion/"><img src="assets/svg logos/instagram-logo.svg" alt="Instagram logo"></a>
-                <a><img src="assets/svg logos/spotify-logo.svg" alt="Spotify logo"></a>
-                <a><img src="assets/svg logos/apple-music-logo.svg" alt="Apple music logo"></a>
-                <a href="https://www.linkedin.com/in/pachara-buatim"><img src="assets/svg logos/linkedin-logo.svg" alt="Linkedin logo"></a>
-            </div>
-        </section>
-        <section id="content-section">
-            <section id="about-section">
-                <h2 class="section-title bold">ABOUT</h2>
-                <p>
-                    Hi, I'm Pachara. I'm a web developer who enjoys building things and bringing ideas to life. 
-                    I like creating websites that are not only functional but also thoughtful in their design, 
-                    focusing on clean layouts, smooth interactions, and experiences that feel natural to use.
-                </p>
-
-                <p>
-                    Currently, I'm focused on improving my front-end development skills through personal projects 
-                    and exploring the relationship between code and design. I'm learning more about modern web 
-                    technologies, responsive design, and the process of turning ideas from concepts or designs 
-                    into real, working products.
-                </p>
-
-                <p>
-                    Beyond development, I'm interested in creative work that combines technology and self-expression. 
-                    Music production has always been an important part of my life, and I enjoy experimenting with 
-                    different sounds, ideas, and creative processes. I believe creativity from different fields can 
-                    influence the way we approach problem-solving and design.
-                </p>
-
-                <p>
-                    I'm always looking for opportunities to learn, create, and improve. Whether it's building a 
-                    new project, exploring a new technology, or developing my creative skills, my goal is to keep 
-                    growing and create work that reflects both my curiosity and passion for making things.
-                </p>
-            </section>
-            <section id="project-section">
-                <h2 class="section-title bold">PROJECT</h2>
-                <a class="project-link" href="https://pachara-buatim.github.io/todo-app/"><h3 class="project-name">Build a Todo App</h3></a>
-                <p>A responsive to-do app for managing tasks with a clean and intuitive user interface.</p>
-            </section>
+        <section id="about-section">
+            <h2 id="about-title">ABOUT</h2>
+            <p class="introduction">I'm Pachara, a web developer and music producer who loves creating immersive digital experiences through code, music, and design.</p>
+            <p class="poetry">Not everything needs a purpose. Sometimes, it's enough that it makes someone stop scrolling, listen a little longer, or feel something they can't quite put into words.</p>
+        
         </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
