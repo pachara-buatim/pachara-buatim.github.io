@@ -16,6 +16,7 @@ body {
 header {
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 
 #nav-bar {
@@ -23,7 +24,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    width: 100vw;
+    width: 100%;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -151,7 +152,7 @@ header {
     color: transparent;
     -webkit-text-stroke: 2px #fff;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,7 +176,7 @@ header {
 #vinyl-image,
 #vinyl-video {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -188,7 +189,7 @@ header {
 
 h1 {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
