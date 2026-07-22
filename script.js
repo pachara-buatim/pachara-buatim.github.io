@@ -26,3 +26,17 @@ window.addEventListener("scroll", () => {
     contactBtn.classList.remove("contact-btn-dark");
    }
 });
+
+window.addEventListener("load", () => {
+   const bg = document.getElementById("animate-background");
+   const outline = document.querySelector(".animate-title");
+
+   setTimeout(() => {
+      bg.classList.add("animate");
+   }, 1100);
+
+   setTimeout(() => {
+      outline.classList.add("show-outline");
+   }, 50);
+
+});

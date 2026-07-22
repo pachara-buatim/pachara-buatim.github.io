@@ -27,7 +27,7 @@ header {
     padding: 20px;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 99;
 }
 
 #nav-bar.dark .nav-link {
@@ -107,6 +107,66 @@ header {
     width: 20px;
 }
 
+#animate-background {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+}
+
+.animate-background-left {
+    background-color: #0F0F0F;
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+    left: 0;
+}
+
+.animate-background-right {
+    background-color: #0F0F0F;
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.animate .animate-background-left {
+    transform: translateX(-100%);
+}
+
+.animate .animate-background-right {
+    transform: translateX(100%);
+}
+
+.animate-background-left,
+.animate-background-right {
+    transition: transform 1.5s ease-in-out;
+}
+
+.animate-title {
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 178px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 700;
+    z-index: 6;
+    opacity: 0;
+    transform: translate(-50%, 100%);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.show-outline {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
 #vinyl-image,
 #vinyl-video {
     width: 100vw;
@@ -132,7 +192,7 @@ h1 {
     font-size: 64px;
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: 4;
 }
 
 #about-section {
