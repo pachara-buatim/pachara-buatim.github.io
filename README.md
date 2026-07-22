@@ -2,6 +2,9 @@
 
 A responsive personal website built to showcase my projects, skills, and creative work. This project was created as part of my web development journey to practice modern HTML, CSS, and JavaScript while designing a clean and user-friendly interface.
 
+## See Live Version
+https://pachara-buatim.github.io
+
 ## Features
 
 * Smooth scrolling navigation.
@@ -27,9 +30,6 @@ Through this project, I practiced and improved my understanding of:
 * JavaScript fundamentals and DOM manipulation.
 * Creating reusable and organized code.
 * Building and deploying a real-world website project.
-
-## See Live Version
-https://pachara-buatim.github.io
 
 ## Future Improvements
 
