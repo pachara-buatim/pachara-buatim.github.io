@@ -173,7 +173,6 @@ header {
     opacity: 1;
 }
 
-#vinyl-image,
 #vinyl-video {
     width: 100vw;
     height: 100%;
@@ -181,10 +180,6 @@ header {
     position: absolute;
     top: 0;
     z-index: -1;
-}
-
-#vinyl-image {
-    z-index: -2;
 }
 
 h1 {

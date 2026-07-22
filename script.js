@@ -49,14 +49,3 @@ function playIntroAnimation() {
 window.addEventListener("load", () => {
    playIntroAnimation();
 });
-
-const vinylVideo = document.getElementById("vinyl.video");
-const vinylImage = document.getElementById("vinyl-image");
-
-video.play()
-   .then(() => {
-      vinylImage.style.display = "none";
-})
-   .catch(() => {
-      vinylVideo.style.display = "none";
-});
