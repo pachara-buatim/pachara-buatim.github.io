@@ -39,7 +39,7 @@ function playIntroAnimation() {
 
    setTimeout(() => {
       bg.classList.add("animate");
-   }, 1100);
+   }, 1000);
 
    setTimeout(() => {
       outline.classList.add("show-outline");
