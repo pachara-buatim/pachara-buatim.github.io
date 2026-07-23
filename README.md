@@ -7,12 +7,14 @@ https://pachara-buatim.github.io
 
 ## Features
 
+* Responsive design for desktop, tablet, and mobile devices.
 * Smooth scrolling navigation.
 * Modern and minimal UI.
 * Project showcase section.
 * About Me section.
 * Contact section.
 * Interactive elements using JavaScript.
+* animations
 
 ## Built With
 
@@ -33,9 +35,7 @@ Through this project, I practiced and improved my understanding of:
 
 ## Future Improvements
 
-* Responsive design for desktop, tablet, and mobile devices.
 * Add more projects and portfolio items.
-* Add animations and page transitions.
 * Integrate a contact form with a backend service.
 * Improve accessibility and SEO.
 
