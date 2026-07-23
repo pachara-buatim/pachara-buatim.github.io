@@ -46,6 +46,6 @@ function playIntroAnimation() {
    }, 50);
 }
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
    playIntroAnimation();
 });
