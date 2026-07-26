@@ -4,284 +4,149 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    background-color: black;
-}
-
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Inter', sans-serif;
+    color: #373845;
 }
 
-header {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
-
-#nav-bar {
+#hero-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    z-index: 99;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 20px 30px;
 }
 
-#nav-bar.dark .nav-link {
-    color: #000;
-}
-
-.nav-link, .name-link {
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    z-index: 2;
+.title-desktop {
     display: none;
 }
 
-.nav-link:not(.name-link):hover {
-    cursor: pointer;
-    color: #dddbdb;
+#name {
+    line-height: 0.5;
+    margin-top: 20px;
 }
 
-.nav-left {
+h2 {
     display: flex;
     align-items: center;
-    gap: 30px;
-    width: 20.33%;
+    gap: 5px;
 }
 
-
-.name-link {
-    text-align: center;
-    width: 33.33%;
-    font-size: 32px;
-    font-weight: 700;
+h2, h3 {
+    font-size: 16px;
+    font-weight: normal;
 }
 
-.name-link:hover {
-    cursor: pointer;
+.bullet {
+    font-size: 30px;
+    color: #A6AAB3;
 }
 
-.nav-right {
+p {
+    color: #777883;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+#contact-btn {
+    text-decoration: none;
+    background-color: #0F0E13;
+    color: #fff;
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Project section */
+#project-section {
+    background-color: #F6F8FA;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
+}
+
+#project-section h2 {
+    margin-bottom: 20px;
+}
+
+.project-box {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgb(214, 214, 214, 0.5);
     display: flex;
     align-items: center;
-    gap: 30px;
-    width: 20.33%;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
-.menu-button {
-    width: 32px;
+.project-logo {
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgb(231, 230, 230);
 }
 
-.menu-button:hover {
-    cursor: pointer;
+.project-information {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
 }
 
-.logos {
+.project-box-left {
+    display: flex;
+    gap: 10px;
+}
+
+.right-arrow {
     width: 20px;
 }
 
-.contact-btn {
-    color: #fff;
-    font-weight: 700;
-    border: 1.5px solid #fff;
-    padding: 7px 15px;
-    display: none;
+.project {
+    text-decoration: none;
+    color: #373845;
 }
 
-.contact-btn:hover {
-    cursor: pointer;
-    color: #301508;
-    background-color: #fff;
-}
 
-.contact-btn-dark {
-    color: #000;
-    border: 1.5px solid #000;
-}
-
-.contact-btn-dark:hover {
-    cursor: pointer;
-    color: #fff;
-    background-color: #000;
-}
-
-#vinyl-video {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-}
-
-h1 {
-    height: 100vh;
-    width: 100%;
+/* contact section */
+#contact-section {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #fff;
-    font-size: 64px;
-    position: absolute;
-    top: 0;
-    z-index: 4;
+    justify-content: space-between;
+    margin: 5px;
+    background-color: #F6F8FA;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-
-/* Hero Animation */
-#animate-background {
+.contact-links {
     display: flex;
-    position: absolute;
-    inset: 0;
-    z-index: 5;
+    gap: 15px;
 }
 
-.animate-background-left {
-    background-color: #0F0F0F;
-    height: 100vh;
-    width: 50%;
-    position: absolute;
-    left: 0;
-}
-
-.animate-background-right {
-    background-color: #0F0F0F;
-    height: 100vh;
-    width: 50%;
-    position: absolute;
-    right: 0;
-}
-
-.animate .animate-background-left {
-    transform: translateX(-100%);
-}
-
-.animate .animate-background-right {
-    transform: translateX(100%);
-}
-
-.animate-background-left,
-.animate-background-right {
-    transition: transform 1.5s ease-in-out;
-}
-
-.animate-title {
-    color: transparent;
-    -webkit-text-stroke: 2px #fff;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 64px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-weight: 700;
-    z-index: 6;
-    opacity: 0;
-    transform: translate(-50%, 100%);
-    transition: transform 1s ease, opacity 1s ease;
-    text-align: center;
-}
-
-.show-outline {
-    transform: translate(-50%, -50%);
-    opacity: 1;
+.contact-links img {
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgb(227, 226, 226);
 }
 
 
-/* About Section */
-#about-section {
-    min-height: 100vh;
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px;
-    background-color: #fff;
-}
-
-#about-title {
-    font-size: 40px;
-}
-
-.introduction, .poetry {
-    font-size: 32px;
-    font-weight: 200;
-}
-
-
-/* Small Phone */
-@media (max-width: 390px) {
-    #about-title {
-        font-size: 32px;
-    }
-
-    .introduction, .poetry {
-        font-size: 24px;
-    }
-}
-
-
-/* Medium Screen */
-@media (min-width: 640px) {
-    h1, .animate-title {
-        font-size: 150px;
-    }
-
-    #about-title {
-        font-size: 100px;
-    }
-
-    .introduction, .poetry {
-        font-size: 52px;
-    }
-}
-
-
-/* Big Screen */
 @media (min-width: 1024px) {
-    
-    h1, .animate-title {
-        font-size: 178px;
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
     }
 
-    .nav-link, .name-link {
-        display: inline-block;
+    .title-mobile {
+        display: none;
     }
 
-    .contact-btn {
-        display: inline-block;
+    .title-desktop {
+        display: flex;
     }
 
-    #nav-bar {
-        padding: 30px 50px;
-    }
-
-    #about-section {
-        padding: 0 100px;
-    }
-
-    #about-title {
-        font-size: 80px;
-    }
-
-    .introduction, .poetry {
-        font-size: 40px;
-    }
-
-    .poetry {
-        margin-left: 30px;
+    #right-screen {
+        width: 40%;
     }
 }
-
-

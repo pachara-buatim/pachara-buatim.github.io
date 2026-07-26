@@ -4,52 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pachara Buatim</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Nav Bar -->
-    <nav id="nav-bar">
-            <div class="nav-left">
-                <img class="menu-button" src="assets/svgs/menu.svg">
-                <a href="#about-section" class="nav-link">ABOUT</a>
-                <a class="nav-link">PROJECTS</a>
-                <a class="nav-link">MUSIC</a>
-            </div>
-            <a href="#hero-section" class="nav-link name-link">PACHARA BUATIM</a>
-            <div class="nav-right">
-                <a class="nav-link"><img class="spotify logos" src="assets/svgs/spotify-logo.svg"></a>
-                <a class="nav-link"><img class="apple logos" src="assets/svgs/apple-logo.svg"></a>
-                <a class="nav-link"><img class="amazon logos" src="assets/svgs/amazon-logo.svg"></a>
-                <a class="nav-link"><img class="youtube logos" src="assets/svgs/youtube-logo.svg"></a>
-                <a class="contact-btn">CONTACT</a>
-            </div>
-        </nav>
+    <div id="left-screen">
+    <section id="hero-section">
+        <h2 class="title-mobile"><span class="bullet">•</span> Web Developer</h2>
+        <h1 id="name">Pachara Buatim</h1>
+        <h2 class="title-desktop"><span class="bullet">•</span> Web Developer</h2>
+        <p>Web developer from Thailand. Focus on modern, responsive, and user-friendly</p>
+        <a id="contact-btn" href="#contact-section">Contact</a>
+    </section>
+    </div>
 
-    <!-- Hero Section -->
-    <header id="hero-section">
-        <div id="animate-background">
-            <div class="animate-background-left"></div>
-            <div class="animate-background-right"></div>
+    <div id="right-screen">
+    <section id="project-section">
+        <h2><span class="bullet">•</span> Projects</h2>
+        <a class="project" href="#">
+            <div class="project-box">
+                <div class="project-box-left">
+                    <img class="project-logo" src="assets/logos/vinyl.png">
+                    <div class="project-information">
+                    <h3>Music artist</h3>
+                    <p>Landing page, music links</p>
+                    </div>
+                </div>
+                <span><img class="right-arrow" src="assets/svg/right-arrow.svg"></span>
+            </div>
+        </a>
+    </section>
+
+    <section id="contact-section" class="contact-section-mobile">
+        <h2><span class="bullet">•</span> Contacts</h2>
+        <div class="contact-links">
+            <a href="https://wa.me/66828790456"><img src="assets/contact/whatsapp.svg"></a>
+            <a href="mailto:pacharabuatim.work@gmail.com"><img src="assets/contact/email.svg"></a>
+            <a href="https://www.linkedin.com/in/pachara-buatim"><img src="assets/contact/linkedin.svg"></a>
+            <a href="https://www.instagram.com/korviion/"><img src="assets/contact/instagram.svg"></a>
         </div>
-        <p class="animate-title">PACHARA BUATIM</p>
-        <video id="vinyl-video" src="assets/vinyl.mp4" autoplay muted loop playsinline poster="assets/vinyl.jpg"></video>
-        <h1>PACHARA BUATIM</h1>
-    </header>
-
-
-    <main>
-        <!-- About Section -->
-        <section id="about-section">
-            <h2 id="about-title">ABOUT</h2>
-            <p class="introduction">I'm Pachara, a web developer and music producer who loves creating immersive digital experiences through code, music, and design.</p>
-            <p class="poetry">Not everything needs a purpose. Sometimes, it's enough that it makes someone stop scrolling, listen a little longer, or feel something they can't quite put into words.</p>
-        
-        </section>
-    </main>
+    </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
