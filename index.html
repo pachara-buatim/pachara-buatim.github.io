@@ -4,47 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pachara Buatim</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://your-domain/">
+    <link rel="stylesheet" href="https://your-domain/inter.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div id="left-screen">
-    <section id="hero-section">
-        <h2 class="title-mobile"><span class="bullet">•</span> Web Developer</h2>
-        <h1 id="name">Pachara Buatim</h1>
-        <h2 class="title-desktop"><span class="bullet">•</span> Web Developer</h2>
-        <p>Web developer from Thailand. Focus on modern, responsive, and user-friendly</p>
-        <a id="contact-btn" href="#contact-section">Contact</a>
-    </section>
-    </div>
-
-    <div id="right-screen">
-    <section id="project-section">
-        <h2><span class="bullet">•</span> Projects</h2>
-        <a class="project" href="https://pachara-buatim.github.io/music/" target="_blank">
-            <div class="project-box">
-                <div class="project-box-left">
-                    <img class="project-logo" src="assets/logos/vinyl.png">
-                    <div class="project-information">
-                    <h3>Music artist</h3>
-                    <p>Landing page, music links</p>
-                    </div>
+    <nav>
+        <p class="logo"><a href="#hero-section">Pachara</a></p>
+        <ul class="nav-links">
+            <li><a href="#work-section">Work</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+        </ul>
+    </nav>
+    <header id="hero-section">
+        <h1>Pachara Buatim</h1>
+        <p class="role">Web Developer</p>
+        <p class="introduction">Creating the web, one project at a time. Web developer focusing on clean, responsive and functional website.<br>Based in Thailand.</p>
+    </header>
+    <main>
+        <section id="work-section">
+            <h2>Work</h2>
+        </section>
+        <section id="about-section">
+            <h2>About</h2>
+            <hr>
+            <div class="about-content">
+                <img src="./assets/pachara.jpeg">
+                <div>
+                    <p>
+                    I've always been curious about technology since I was young. started with an old, bulky shape that ran Windows XP (when I was 7 years old); I used Google mainly for researching random stuff like how to become a vampire (such a nerd lol). Then I started learning basic HTML on the internet because I wanted to become a hacker so bad.
+                    </p>
+                    <p>
+                        The internet is my best friend. It taught me to become a self-learner (I'm an undergraduate). I find it fun to make things without worrying about how the outcome will be. It feels more like playing a puzzle game than doing projects. You keep building things piece by piece until it becomes fully functional.
+                    </p>
+                    <p>
+                        In the end, I'm still learning, still building, and probably still googling random stuff.
+                    </p>
                 </div>
-                <span><img class="right-arrow" src="assets/svg/right-arrow.svg"></span>
             </div>
-        </a>
-    </section>
-
-    <section id="contact-section" class="contact-section-mobile">
-        <h2><span class="bullet">•</span> Contacts</h2>
-        <div class="contact-links">
-            <a href="https://wa.me/66828790456"><img src="assets/contact/whatsapp.svg"></a>
-            <a href="mailto:pacharabuatim.work@gmail.com"><img src="assets/contact/email.svg"></a>
-            <a href="https://www.linkedin.com/in/pachara-buatim"><img src="assets/contact/linkedin.svg"></a>
-            <a href="https://www.instagram.com/korviion/"><img src="assets/contact/instagram.svg"></a>
-        </div>
-    </section>
-    </div>
-
-    <script src="script.js"></script>
+        </section>
+        <section id="contact-section">
+            <h2>Contact</h2>
+            <hr>
+            <div class="contact-content">
+                <p>Feel free to reach out for new project discussions or just to say hi.</p>
+                <ul class="contact-links">
+                    <li><a href="mailto:pacharabuatim.work@gmail.com">Email me</a></li>
+                    <hr>
+                    <li><a href="https://www.instagram.com/korviion/">Instagram</a></li>
+                </ul>
+            </div>
+            <hr>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#hero-section">Pachara</a></li>
+        </ul>
+        <ul>
+            <li><a href="#hero-section">Home</a></li>
+            <li><a href="#work-section">Work</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+        </ul>
+        <ul>
+            <li><a href="mailto:pacharabuatim.work@gmail.com">Email me</a></li>
+            <li><a href="https://www.instagram.com/korviion/">Instagram</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
