@@ -101,7 +101,7 @@ footer {
     padding-bottom: 20px;
 }
 
-.work-container button {
+.work-container a {
     background-color: #2d8b05;
     color: #fff;
     border: none;
@@ -110,9 +110,10 @@ footer {
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.work-container button:hover {
+.work-container a:hover {
     background-color: #1e5c03;
     transition: all 0.3s ease;
 }
