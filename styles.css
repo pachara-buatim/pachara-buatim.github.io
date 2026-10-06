@@ -80,6 +80,50 @@ footer {
     padding: 70px 40px 0;
 }
 
+#work-section h2 {
+    padding-bottom: 50px;
+}
+
+.work-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.work-container h3 {
+    font-size: 24px;
+}
+
+.work-container p {
+    font-size: 18px;
+    color: #525252;
+    line-height: 26px;
+    padding-bottom: 20px;
+}
+
+.work-container button {
+    background-color: #2d8b05;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.work-container button:hover {
+    background-color: #1e5c03;
+    transition: all 0.3s ease;
+}
+
+#work-section video {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding: 20px 0;
+}
+
 h2 {
     font-size: 32px;
 }
@@ -218,6 +262,10 @@ footer a:hover {
         font-size: 56px;
     }
 
+    .work-container h3 {
+        font-size: 36px;
+    }
+
     #work-section,
     #about-section,
     #contact-section,
@@ -308,6 +356,10 @@ footer a:hover {
 
     h2 {
         font-size: 80px;
+    }
+
+    .work-container h3 {
+        font-size: 40px;
     }
 
     #about-section img {
