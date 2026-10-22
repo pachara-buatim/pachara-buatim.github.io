@@ -1,14 +1,13 @@
-@import url('./assets/fonts/css/switzer.css');
-@font-face {
-    font-family: 'Inter';
-    src: url('./assets/fonts/static/Inter_18pt-Light.ttf');
-    font-weight: 400;
-    font-style: normal;
+:root {
+    --background-color: #fff;
+    --font-color: #000;
+    --secondary-font-color: #64748B;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -16,386 +15,279 @@ html {
 }
 
 body {
-    font-family: Switzer-Regular, sans-serif;
+    font-family: san-francisco, sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
-nav {
+main {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    border-bottom: 0.5px solid #DFE4DF;
-    position: sticky;
-    top: 0;
-    background-color: #fff;
+    height: 100vh;
+    padding: 6.25vw;
 }
 
-.logo a {
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
+h1 {
+    font-size: 1.8em;
+}
+
+#left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 6.25vw 3.125vw 6.25vw 6.25vw;
+    border-right: 1px solid lightgray;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.role {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .nav-links {
     display: flex;
-    list-style: none;
-    gap: 11px;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.nav-links a {
+.nav-links .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links .line {
+    width: 30px;
+    height: 1px;
+    background-color: var(--secondary-font-color);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.nav-links .line {
+    transition: width 0.3s ease;
+}
+
+.nav-links a  {
     text-decoration: none;
-    font-size: 14px;
-    color: #000;
-    border-radius: 7px;
-    padding: 3px 7px;
+    color: inherit;
+    font-weight: 400;
+    transition: font-weight 0.2s ease;
+}
+
+.nav-item {
+    align-self: flex-start;
+}
+
+.nav-links .nav-item:hover .line {
+    width: 60px;
+    height: 2px;
+}
+
+.nav-links .nav-item:hover a {
+    font-weight: 700;
+}
+
+.nav-links .line.active {
+    width: 60px;
+    height: 2px;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
     transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-    background-color: #DFE4DF;
-    transition: all 0.3s ease;
+.social-links svg,
+.social-links svg path,
+.social-links svg g {
+    fill: var(--font-color);
 }
 
-#hero-section {
-    padding: 100px 40px 0;
+#linkedin-link:hover svg path {
+    fill: #0B66C2;
 }
 
-h1,
-.role {
-    font-size: 56px;
-    font-weight: 500;
-    line-height: 1;
+#x-link:hover svg path {
+    fill: #1D9BF0;
 }
 
-.introduction {
-    font-size: 20px;
-    padding: 35px 0 0; 
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
+#instagram-link:hover svg path {
+    fill: #D300C5;
 }
 
-#work-section,
-#about-section,
-#contact-section,
-footer {
-    padding: 70px 40px 0;
+#youtube-link:hover svg path {
+    fill: #FF0033;
 }
 
-#work-section h2 {
-    padding-bottom: 50px;
+#medium-link:hover svg path {
+    fill: #FFBF18;
 }
 
-.work-container {
+#right {
+    width: 70%;
+    margin-left: 30%;
+}
+
+#about-section {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 20px;
+    line-height: 1.5;
+    margin-bottom: 100px;
 }
 
-.work-container h3 {
-    font-size: 24px;
+#project-section,
+#blog-section {
+    padding-bottom: 100px;
+    margin-bottom: 50px;
 }
 
-.work-container p {
-    font-size: 18px;
-    color: #525252;
-    line-height: 26px;
-    padding-bottom: 20px;
+.project-card,
+.blog-card {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-.work-container a {
-    background-color: #2d8b05;
-    color: #fff;
-    border: none;
-    border-radius: 7px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
+.project-info,
+.blog-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.work-container a:hover {
-    background-color: #1e5c03;
-    transition: all 0.3s ease;
-}
-
-#work-section video {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    padding: 20px 0;
+.project-info p,
+.blog-info p {
+    line-height: 1.5;
+    color: var(--secondary-font-color);
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
-#about-section hr {
-    border: 0.5px solid #DFE4DF;
-    margin: 40px 0 15px;
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-#about-section img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    object-position: bottom;
-    padding: 20px 0;
+.project-card,
+.blog-card {
+    transition: box-shadow 0.3s ease;
 }
 
-#about-section p {
-    font-size: 18px;
-    color: #525252;
-    line-height: 26px;
+.project-card:hover,
+.blog-card:hover {
+    cursor: pointer;
 }
 
-#about-section p:not(:last-child) {
-    padding-bottom: 30px;
+hr {
+    border: 0.5px solid lightgray;
+    margin: 20px 0;
 }
 
-#about-section p:last-child {
-    padding-bottom: 70px;
-}
-
-#contact-section hr {
-    border: 0.5px solid #DFE4DF;
-    margin: 30px 0;
-}
-
-#contact-section p {
-    font-size: 18px;
-    color: #525252;
-    line-height: 26px;
-    padding-bottom: 50px;
-}
-
-.contact-links {
-    list-style: none;
-}
-
-.contact-links a {
+#project-section a,
+#blog-section a {
     text-decoration: none;
-    color: #000;
-    font-size: 28px;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-
-.contact-links a:hover {
-    color: #707070;
-    transform: translateX(5px);
-    transition: all 0.3s ease;
-}
-
-.contact-links hr {
-    border: 0.5px solid #DFE4DF;
-    margin: 20px 0 30px;
-}
-
-.contact-links hr:last-child {
-    margin: 80px 0;
-}
-
-footer ul {
-    list-style: none;
-    padding-bottom: 30px;
-}
-
-footer li {
-    padding-bottom: 20px;
-}
-
-footer a {
-    font-size: 20px;
-    text-decoration: none;
-    color: #000;
-}
-
-footer a:hover {
-    color: #707070;
+    color: inherit;
 }
 
 
-@media screen and (min-width: 700px) {
-    #about-section img {
-        object-position: 20% 70%;
+@media (max-width: 450px) {
+    main {
+        flex-direction: column;
+        padding: 50px;
     }
 
-    footer {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 200px;
-    }
-}
-
-@media screen and (min-width: 1000px){
-    nav {
-        padding: 20px 60px;
-    }
-
-    .logo a {
-        font-size: 21px;
-    }
-
-    .nav-links {
-        gap: 20px;
-    }
-
-    .nav-links a {
-        font-size: 16px;
-    }
-
-    #hero-section {
-        padding: 100px 60px 0;
-    }
-
-    h1,
-    .role {
-        font-size: 76px;
-    }
-
-    .introduction {
-        font-size: 22px;
-        margin-left: 500px;
-        padding-top: 80px;
-    }
-
-    h2 {
-        font-size: 56px;
-    }
-
-    .work-container h3 {
-        font-size: 36px;
-    }
-
-    #work-section,
-    #about-section,
-    #contact-section,
-    footer {
-        padding: 70px 60px 0;
-    }
-
-    #about-section img {
-        object-position: center;
+    #left {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        border-right: none;
         padding: 50px 0;
-        height: 1000px;
-    }
-
-    #about-section p {
-        font-size: 20px;
-        line-height: 29px;
-        margin-right: 250px;
-    }
-
-    #contact-section p {
-        font-size: 20px;
-        padding-top: 40px;
-    }
-
-    .contact-links a {
-        font-size: 32px;
-    }
-
-    .contact-links li:first-child {
-        padding-top: 40px;
-    }
-
-    .contact-links li:last-child {
-        padding-bottom: 80px;
-    }
-
-    .contact-content {
-        display: grid;
-        grid-template-columns: 330px 1fr;
-        gap: 30px;
-    }
-
-    footer {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 100px;
-    }
-
-    footer a {
-        font-size: 21px;
-    }
-
-}
-
-@media screen and (min-width: 1300px) {
-    nav {
-        padding: 20px 100px;
-    }
-
-    .logo {
-        font-size: 22px;
+        justify-content: flex-start;
+        gap: 40px;
     }
 
     .nav-links {
-        gap: 30px;
+        display: none;
     }
 
-    #hero-section {
-        padding: 150px 100px 0;
+    #right {
+        width: 100%;
+        margin-left: 0;
     }
 
-    h1, .role {
-        font-size: 108px;
+    .project-card,
+    .blog-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
     }
 
-    .introduction {
-        font-size: 24px;
-        line-height: 35px;;
-        margin-left: 520px;
+    .project-card img,
+    .blog-card img {
+        width: 100%;
+        height: auto;
     }
 
-    #work-section,
-    #about-section,
-    #contact-section,
-    footer {
-        padding: 150px 100px 0;
+    .project-info,
+    .blog-info {
+        order: 2;
+    }
+}
+
+@media (max-width: 960px) {
+    main {
+        flex-direction: column;
+        padding: 50px;
     }
 
-    h2 {
-        font-size: 80px;
+    #left {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        border-right: none;
+        padding: 50px 0;
+        justify-content: flex-start;
+        gap: 40px;
     }
 
-    .work-container h3 {
-        font-size: 40px;
+    .nav-links {
+        display: none;
     }
 
-    #about-section img {
-        width: 5000px;
-        height: 600px;
-        object-position:  20% 70%;
+    #right {
+        width: 100%;
+        margin-left: 0;
     }
 
-    #about-section p {
-        margin-right: 0;
-    }
-
-    #about-section p:first-of-type {
-        padding-top: 50px;
-    }
-
-    .about-content {
-        display: flex;
-        gap: 50px;
-    }
-
-    .contact-links a {
-        font-size: 36px;
-    }
-
-    .contact-content {
-        grid-template-columns: 400px 1fr;
-        gap: 30px;
-    }
-
-    footer {
-        margin-right: 280px;
-    }
-
-    footer a {
-        font-size: 22px;
+    .project-card,
+    .blog-card {
+        padding: 0;
     }
 }
