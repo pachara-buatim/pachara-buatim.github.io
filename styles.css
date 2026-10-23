@@ -125,16 +125,16 @@ h1 {
     fill: #0B66C2;
 }
 
-#x-link:hover svg path {
-    fill: #1D9BF0;
-}
-
 #instagram-link:hover svg path {
     fill: #D300C5;
 }
 
 #youtube-link:hover svg path {
     fill: #FF0033;
+}
+
+#tableau-link:hover svg path {
+    fill: #E8762A;
 }
 
 #medium-link:hover svg path {
