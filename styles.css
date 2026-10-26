@@ -129,8 +129,8 @@ h1 {
     fill: #D300C5;
 }
 
-#youtube-link:hover svg path {
-    fill: #FF0033;
+#github-link:hover svg path {
+    fill: #1E883E;
 }
 
 #tableau-link:hover svg path {
